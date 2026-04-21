@@ -22,6 +22,7 @@ void cw(){
     var1 = var1 << 1;
     var2 = ~var1;
     var2 = var2 & 0x0000F000;
+    IO0PIN = ~var2;
     for(k=0;k<5000;k++);
     }
 }
