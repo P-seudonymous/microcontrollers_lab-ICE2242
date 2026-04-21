@@ -16,7 +16,7 @@ int main(){
 }
 
 void a_cw(){
-    var1 = 0x00000800;
+    var1 = 0x00010000;
     for(i=0;i<3;i++){
     var1 = var1 >> 1;
     var2 = ~var1;
