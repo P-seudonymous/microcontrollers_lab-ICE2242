@@ -1,4 +1,4 @@
-// anti clockwise for  a given period of time
+// anti clockwise when sw4 is pressed
 #include <lpc21xx.h>
 
 void a_cw();
@@ -7,7 +7,7 @@ unsigned int i;
 int main(){
     IO0DIR = 0x00000900;
     IO0SET = 0x00000100;
-    while(1){
+    while(!(IOPIN1 & (1<<20))){
         a_cw();
         for(i=0;i<500000;i++)
     }
@@ -20,4 +20,5 @@ void a_cw(){
     for(i=0;i<100000;i++);
     IO0CLR = 0x00000100;}
 }
+
 
